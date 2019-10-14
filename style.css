@@ -1,0 +1,143 @@
+body {
+	height: 1600px;
+}
+header{
+	z-index: 20;
+	overflow-x: hidden;
+}
+.poto {
+	float: left;
+}
+.text {
+	width: 200px;
+	float:right;
+}
+.box:after{
+	content:" ";
+	clear: both;
+	display: block;
+}
+.text1{
+	background: blue;
+	height: 50px;
+	left: 0;
+	bottom: 0;
+}
+.box2{
+	position: sticky;
+	left: 150px;
+	top: 60px;
+	font-size: 40px;
+	background-color: aqua;
+	z-index: 10;
+}
+.wrapper{
+	width: 500px;
+	height: 500px;
+	position: relative;
+/*	transition-property: all;
+	transition-delay: 0.5s;
+	transition-duration: 0.3s;
+	transition-timing-function: linear;*/
+	transition: all 0.5s linear 0.3s;
+}
+.wrapper:hover{
+	background-color:aqua!important;
+}
+.wrapper:hover .bg-danger{
+	transform: translate(-50%,-50%) rotate(45deg) scale(1.2)skew(10deg, 20deg);
+}
+
+.wrapper  .bg-danger{
+	width: 200px;
+	height: 200px;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	transition: all 0.5s linear 0.3s;
+}
+
+.wrapper  .bg-dark{
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+.wrapper  .bg-light  {
+	width: 200px;
+	height: 200px;
+	top: 100px;
+    left: 100px;
+}
+.wrapper .bg-primary{
+	width: 200px;
+	height: 200px;
+	top: 150px;
+    left: 150px;
+}
+.animation {
+	position: absolute;
+	top: 50px;
+	right: 200px;
+	height: 150px;
+	width: 150px;
+	border-radius: 50px;
+	animation: move 3s infinite alternate;
+}
+.car-animation {
+	position: absolute;
+	bottom: 200px;
+	height: 100px;
+	animation: carmove 3s infinite;
+	z-index: 50;
+}
+@keyframes carmove{
+	0% {
+		right: 0;
+	}
+	25% {
+		right: 50px;
+	}
+	50% {
+		right: 100px;
+	}
+	75% {
+		right: 500px;
+	}
+	85% {
+		right: 2600px;
+	}
+	100% {
+		right: 3600px;
+	}
+}
+
+
+@keyframes move {
+	0% {
+		background:pink;
+		transform: rotate(0deg);
+		top:100px;
+	}
+	25% {
+		background:blue;
+		transform: rotate(72deg);
+		top:150px;
+	}
+	50% {
+		background:green;
+		transform: rotate(144deg);
+		top:200px;
+	}
+	75% {
+		background:yellow;
+		transform: rotate(216deg);
+		top:250px;
+	}
+	100% {
+		background:black;
+		transform: rotate(360deg);
+		top:300px;
+	}
+}
